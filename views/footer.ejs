@@ -1,0 +1,65 @@
+<script src="js/vue.min.js"></script>
+	<script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
+
+
+
+<!-- <script src="https://unpkg.com/element-ui/lib/index.js"></script> -->
+<script>
+	var vm = new Vue({
+      el: '#app',
+      data: {
+         search:'',
+         show:false,
+         res:''
+      },
+      watch:{
+      	search:function () {
+      		// body...
+      		var nan=/^1/g
+      		var nv=/^2/g
+      		this.show=true
+      		if (this.search.startsWith('1')) {
+      			this.res=this.search.replace(/^\d/g,'')+'男生寝室'
+      		}else if (this.search.startsWith('2')) {
+      			this.res=this.search.replace(/^\d/g,'')+'女生寝室'
+      		}
+      		else this.res=this.search.replace(/^\d/g,'')+'研究生寝室'
+      		
+      	}
+      }
+
+    })
+</script>
+<script type="text/javascript">
+/* 鼠标特效 */
+let a= "+1S";
+let color=['blue','red','yellow','green'];
+let index_c=0;
+jQuery(document).ready(function($) {
+  $("body").click(function(e) {
+    var $i = $("<span/>").text(a);
+    var x = e.pageX,
+    y = e.pageY;
+    
+    $i.css({
+      "z-index": 999,
+      "top": y - 20,
+      "left": x,
+      "position": "absolute",
+      "font-weight": "bold",
+      "color": color[index_c%4]
+    });
+    index_c++;
+    $("body").append($i);
+    $i.animate({
+      "top": y - 180,
+      "opacity": 0
+    },
+    1500,
+    function() {
+      $i.remove();
+    });
+  });
+});
+</script>
+</html>

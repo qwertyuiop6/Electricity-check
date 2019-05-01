@@ -1,0 +1,25 @@
+body{
+	
+}
+.center{
+	flex: auto;
+	margin: 10px 3px;
+}
+.node{
+	color: #17c717;
+	
+}
+.bg{
+	width: 60%;
+    background: rgba(0, 0, 0, 0.0784313725490196);
+    padding: 20px 10px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 auto;
+}
+#bg{
+	animation-duration: 1.5s;
+}
