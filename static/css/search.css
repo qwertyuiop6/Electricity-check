@@ -1,13 +1,9 @@
-body{
-	
-}
 .center{
 	flex: auto;
 	margin: 10px 3px;
 }
 .node{
 	color: #17c717;
-	
 }
 .bg{
 	width: 60%;
